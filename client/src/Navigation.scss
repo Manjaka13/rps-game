@@ -1,0 +1,130 @@
+/*
+	Styles for nav
+*/
+
+@import "./vars";
+
+.rps-navigation {
+	display: block;
+	width: 100%;
+	height: auto;
+	padding-bottom: 10px;
+	.brand {
+		display: inline-block;
+		vertical-align: top;
+		padding-left: 40px;
+		.game {
+			display: inline-block;
+			vertical-align: top;
+			width: 50px;
+			height: 50px;
+			overflow: hidden;
+			border-radius: 50%;
+			box-shadow: 0px 0px 2px black;
+			text-align: center;
+			color: rgb(40, 40, 40);
+			background: white;
+			margin-top: 10px;
+			margin-right: 10px;
+			.icon {
+				font-size: 26pt;
+				margin-top: 8px;
+			}
+		}
+		.title {
+			display: inline-block;
+			vertical-align: top;
+			color: white;
+			text-shadow: 0px 1px 2px black;
+			padding-top: 13px;
+		}
+	}
+	.social {
+		list-style-type: none;
+		float: right;
+		padding-right: 30px;
+		li {
+			display: inline-block;
+			vertical-align: top;
+			margin-top: 18px;
+			
+			.link {
+				display: block;
+				text-align: center;
+				width: 50px;
+				height: 50px;
+				overflow: hidden;
+				text-decoration: none;
+				color: white;
+				font-size: 24pt;
+				position: relative;
+				top: 0;
+				transition: all 0.2s ease-in-out;
+				&:hover {
+					top: -8px;
+					text-shadow: 0px 0px 4px white;
+					font-size: 34pt;
+				}
+			}
+		}
+	}
+
+	@media only screen and (max-width: $rps-screen-sm) {
+		.brand {
+			padding-left: 10px;
+			.title {
+				padding-top: 17px;
+			}
+		}
+		.social {
+			padding-right: 0;
+			li {
+				margin-top: 18px;				
+				.link {
+					display: block;
+					text-align: center;
+					width: 50px;
+					height: 50px;
+					overflow: hidden;
+					text-decoration: none;
+					color: white;
+					font-size: 24pt;
+					position: relative;
+					top: 0;
+					transition: all 0.2s ease-in-out;
+					&:hover {
+						top: -8px;
+						text-shadow: 0px 0px 4px white;
+						font-size: 34pt;
+					}
+				}
+			}
+		}
+	}
+	@media only screen and (max-width: $rps-screen-xsm) {
+		.brand {
+			padding-left: 10px;
+			.title {
+				padding-top: 23px;
+				font-size: 15pt;
+			}
+		}
+	}
+	@media only screen and (max-width: 450px) {
+		.brand {
+			padding-left: 10px;
+			.title {
+				padding-top: 27px;
+				font-size: 11pt;
+			}
+		}
+	}
+	@media only screen and (max-width: 370px) {
+		.brand {
+			padding-left: 10px;
+			.title {
+				display: none;
+			}
+		}
+	}
+}

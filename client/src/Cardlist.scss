@@ -1,0 +1,77 @@
+/*
+	Styles for the rock, paper, scissors choice panel
+*/
+
+@import "./vars";
+
+.rps-cardlist {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	padding-top: 20px;
+	text-align: center;
+	.card {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 140px;
+		height: 140px;
+		transition: all 0.8s ease-in-out;
+		.item {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100px;
+			height: 100px;
+			overflow: hidden;
+			border-radius: 50%;
+			background: white;
+			color: rgb(170, 170, 170);
+			cursor: pointer;
+			font-size: 40pt;
+			transition: all 0.2s ease-in-out;
+			&:hover {
+				box-shadow: 0px 0px 10px grey;
+				width: 120px;
+				height: 120px;
+				font-size: 60pt;
+				color: rgb(40, 40, 40);
+			}
+			&:active {
+				box-shadow: 0px 0px 40px black;
+				width: 140px;
+				height: 140px;
+				font-size: 80pt;
+				color: black;
+			}
+		}
+	}
+	.card_disabled {
+		opacity: 0;
+		pointer-events: none;
+	}
+}
+
+@media only screen and (max-width: $rps-screen-xsm) {
+	.rps-cardlist {
+		.card {
+			width: 90px;
+			height: 90px;
+			.item {
+				width: 60px;
+				height: 60px;
+				font-size: 30pt;
+				&:hover {
+					width: 80px;
+					height: 80px;
+					font-size: 40pt;
+				}
+				&:active {
+					width: 90px;
+					height: 90px;
+					font-size: 55pt;
+				}
+			}
+		}
+	}
+}
