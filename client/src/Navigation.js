@@ -14,7 +14,7 @@ function Navigation() {
 		{
 			title: "Contribute this game's repository",
 			icon: faGithub,
-			link: "https://facebook.com/manjaka13/rock-paper-scissors-game"
+			link: "https://github.com/Manjaka13/rps-game"
 		},
 		{
 			title: "Visit my LinkedIn page",
