@@ -6,11 +6,11 @@ const cors = require("cors");
 
 //Middlewares
 app.use(cors());
-app.use(Express.static(path.join(__dirname, "client")));
+app.use(Express.static(path.join(__dirname, "client", "build")));
 app.use(Express.json());
 app.use(Express.urlencoded({extended: true}));
 app.get("/", (req, res) => {
-	res.sendFile(path.join(__dirname, "client", "build"));
+	res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
 //Listen
